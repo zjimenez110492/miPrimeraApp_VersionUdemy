@@ -24,7 +24,6 @@ export class FormularioComponent implements OnInit {
     //Aqui se asigna el viewChils, comvirtiendolo a elemento nativo y sacando su valor
     let persona1 = new Persona(this.nombreInput.nativeElement.value, this.apellidoInput.nativeElement.value);
    this.personasService.agregarPersona(persona1);
-    this.loggingService.enviaMensajeAConsola("Enviamos persona con nombre: " + persona1.nombre + " apellido: " + persona1.apellido);
     //this.personaCreada.emit(persona1);
   }
 }
