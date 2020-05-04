@@ -10,7 +10,7 @@ import { PersonasService } from '../personas.service';
 export class PersonaComponent implements OnInit {
   @Input() persona: Persona;
   @Input() indice: number;
-
+  creado:boolean=false;
   constructor(private PersonasService:PersonasService) 
   {
   
@@ -22,5 +22,12 @@ export class PersonaComponent implements OnInit {
   {
 
     this.PersonasService.saludar.emit( this.indice);
+  }
+  crear()
+  {
+    if(this.creado)
+    this.creado=false;
+    else
+    this.creado=true;
   }
 }

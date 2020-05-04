@@ -1,0 +1,21 @@
+#boton_editar
+{
+    width: 10mm;
+    height: 2mm;
+    background-image: url('../../assets/lapiz.png');
+   
+    background-repeat:no-repeat;
+    background-position:center;
+    text-align: center;
+}
+.btn_guardar
+{
+    width: 100px;
+    height: 50px;
+}
+.labels_modal
+{
+    position: relative;
+    left: 10mm;
+    
+}
