@@ -12,9 +12,14 @@ constructor(private loggingService:LoggingService)
 {
 
 }
-    agregarPersona(persona: Persona){
-        this.loggingService.enviaMensajeAConsola("Enviamos persona con nombre: " + persona.nombre + " apellido: " + persona.apellido);
-   
-        this.personas.push(persona);
-      }
+agregarPersona(persona: Persona){
+    this.loggingService.enviaMensajeAConsola("Enviamos persona con nombre: " + persona.nombre + " apellido: " + persona.apellido);
+
+    this.personas.push(persona);
+  }
+  editarPersona(persona: Persona, indice:number){
+    this.loggingService.enviaMensajeAConsola("Editamos persona con nombre: " + persona.nombre + " apellido: " + persona.apellido);
+
+    this.personas[indice]=persona;
+  }
 }

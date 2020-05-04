@@ -27,28 +27,17 @@
           <p>{{indice}} {{persona.nombre}} {{persona.apellido}}Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, modi ex! Dolores deleniti voluptates nemo, sunt nam eaque velit, illo dicta corrupti, aspernatur eligendi! Repellat soluta cumque magni sint molestias.</p>
         </div>
         <label class="labels_modal">Nombre:  </label>
-            <input type="text" value={{persona.nombre}}>
+            <input type="text" placeholder={{persona.nombre}} [(ngModel)]="nombre">
         <label class="labels_modal">Apellido:  </label>
-            <input type="text" value={{persona.apellido}}>
+            <input type="text" placeholder={{persona.apellido}} [(ngModel)]="apellido">
 
         <!-- Footer de la ventana -->
         <div class="modal-footer">
+          <div >{{nombre}} {{apellido}}</div>
           <button class="btn btn-default" data-dismiss="modal" (click)="crear()">Cerrar</button>
-          <button class="btn_guardar">Guardar</button>
+          <button class="btn_guardar" data-dismiss="modal" (click)=guardar()>Guardar</button>
         </div>
       </div>
     </div>
  </div>
     </div>
-    
-
-<script>
-    jQuery(document).ready(function(){
- 
-	jQuery('#ventana2').on('hidden.bs.modal', function (e) {
-	    jQuery(this).removeData('bs.modal');
-	    jQuery(this).find('.modal-content').empty();
-	})
- 
-    })
-</script>
